@@ -45,7 +45,8 @@
     "@stdlib/constants-float16-pinf": "^0.2.2",
     "@stdlib/constants-float16-sign-mask": "github:stdlib-js/constants-float16-sign-mask#main",
     "@stdlib/constants-float16-significand-mask": "github:stdlib-js/constants-float16-significand-mask#main",
-    "@stdlib/math-base-special-exp2": "^0.3.0"
+    "@stdlib/math-base-special-exp2": "^0.3.0",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/console-log-each-map": "github:stdlib-js/console-log-each-map#main",

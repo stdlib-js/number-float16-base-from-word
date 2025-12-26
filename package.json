@@ -51,7 +51,8 @@
     "@stdlib/math-base-special-exp2": "^0.3.0",
     "@stdlib/number-float16-base-to-float64": "github:stdlib-js/number-float16-base-to-float64#main",
     "@stdlib/number-float16-ctor": "github:stdlib-js/number-float16-ctor#main",
-    "@stdlib/utils-library-manifest": "^0.2.2"
+    "@stdlib/utils-library-manifest": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/console-log-each-map": "github:stdlib-js/console-log-each-map#main",

@@ -62,7 +62,7 @@
     "@stdlib/number-float16-base-assert-is-positive-zero": "^0.1.0",
     "@stdlib/number-float16-base-to-float32": "github:stdlib-js/number-float16-base-to-float32#main",
     "@stdlib/random-array-discrete-uniform": "^0.2.1",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2",
     "@stdlib/string-repeat": "^0.2.2",
     "@stdlib/string-right-pad": "^0.2.2",
     "@stdlib/utils-pick-arguments": "^0.2.2",

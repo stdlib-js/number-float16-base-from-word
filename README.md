@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import fromWord from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@esm/index.mjs';
+import fromWord from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@v0.2.0-esm/index.mjs';
 ```
 
 #### fromWord( word )
@@ -82,7 +82,7 @@ import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-
 import pickArguments from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-pick-arguments@esm/index.mjs';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
 import MAX_UINT16 from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-uint16-max@esm/index.mjs';
-import fromWord from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@esm/index.mjs';
+import fromWord from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@v0.2.0-esm/index.mjs';
 
 // Generate an array of random numbers:
 var word = discreteUniform( 1000, 0.0, MAX_UINT16 );

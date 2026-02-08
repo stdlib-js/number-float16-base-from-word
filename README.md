@@ -44,7 +44,7 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
-fromWord = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@umd/browser.js' )
+fromWord = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@v0.2.1-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -56,7 +56,7 @@ var fromWord = require( 'path/to/vendor/umd/number-float16-base-from-word/index.
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@v0.2.1-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -104,7 +104,7 @@ var f16 = fromWord( word ); // when printed, implicitly promoted to float64
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-pick-arguments@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-uint16-max@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@v0.2.1-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 

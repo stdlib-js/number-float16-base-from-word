@@ -35,32 +35,38 @@ limitations under the License.
 
 > Create a [half-precision floating-point number][ieee754] from an unsigned integer corresponding to an [IEEE 754][ieee754] binary representation.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/number-float16-base-from-word
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var fromWord = require( '@stdlib/number-float16-base-from-word' );
+fromWord = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var fromWord = require( 'path/to/vendor/umd/number-float16-base-from-word/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.fromWord;
+})();
+</script>
 ```
 
 #### fromWord( word )
@@ -90,18 +96,28 @@ var f16 = fromWord( word ); // when printed, implicitly promoted to float64
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var pickArguments = require( '@stdlib/utils-pick-arguments' );
-var logEachMap = require( '@stdlib/console-log-each-map' );
-var MAX_UINT16 = require( '@stdlib/constants-uint16-max' );
-var fromWord = require( '@stdlib/number-float16-base-from-word' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-pick-arguments@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-uint16-max@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float16-base-from-word@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 // Generate an array of random numbers:
 var word = discreteUniform( 1000, 0.0, MAX_UINT16 );
 
 // Create half-precision floating-point numbers from unsigned integers...
 logEachMap( 'word: %d => float16: %f', word, pickArguments( fromWord, [ 0 ] ) );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -110,97 +126,7 @@ logEachMap( 'word: %d => float16: %f', word, pickArguments( fromWord, [ 0 ] ) );
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/number/float16/base/from_word.h"
-```
-
-#### stdlib_base_float16_from_word( word, \*x )
-
-Creates a [half-precision floating-point number][ieee754] from an unsigned 16-bit integer corresponding to an [IEEE 754][ieee754] binary representation.
-
-```c
-#include "stdlib/number/float16/ctor.h"
-#include <stdint.h>
-
-uint16_t word = 51648; // => -11.5
-
-stdlib_float16_t x;
-stdlib_base_float16_from_word( word, &x );
-```
-
-The function accepts the following arguments:
-
--   **word**: `[in] uint16_t` input word.
--   **x**: `[out] stdlib_float16_t*` destination for a half-precision floating-point number.
-
-```c
-void stdlib_base_float16_from_word( const uint16_t word, stdlib_float16_t *x );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/number/float16/base/from_word.h"
-#include "stdlib/number/float16/ctor.h"
-#include "stdlib/number/float32/base/to_float16.h"
-#include <stdint.h>
-#include <stdio.h>
-
-int main( void ) {
-    uint16_t word = 51648;
-
-    stdlib_float16_t x;
-    int i;
-    for ( i = 0; i < 10; i++ ) {
-        stdlib_base_float16_from_word( word+(uint16_t)(i*10), &x );
-        printf( "word: %u => %f\n", word, stdlib_base_float32_to_float16( x ) );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
